@@ -1,0 +1,131 @@
+@import '/src/style/vars.scss';
+.header {
+  position: relative;
+  padding: 10px 20px;
+  background: url(/src/assets/images/13616029.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: 'Alice';
+  font-size: 2rem;
+  overflow: hidden;
+  color: rgb(68, 5, 68);
+
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 5rem;
+  }
+    
+
+  
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      .logo img{
+        height: 40px;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+  
+        li {
+          margin: 0 15px;
+          
+          a {
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s;
+  
+            &::after {
+              content: '';
+              display: block;
+              width: 0;
+              height: 2px;
+              transition: width 0.3s;
+              position: absolute;
+              bottom: -5px;
+              left: 0;
+            }
+  
+            &:hover::after,
+            &:focus::after {
+              width: 100%;
+            }
+          }
+          &.dropdown {
+            position: relative;
+  
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              transform: translateX(-50%);
+              min-width: 160px;
+              z-index: 1;
+              border-radius: 5px;
+  
+              .up, .down {
+                display: flex;
+                justify-content: space-around;
+                padding: 10px;
+  
+                button {
+                  background: none;
+                  border: none;
+                  cursor: pointer;
+                  padding: 5px;
+                  transition: transform 0.3s, opacity 0.3s;
+  
+                  &:hover {
+                    transform: scale(1.1);
+                    opacity: 0.8;
+                  }
+  
+                  svg {
+                    width: 30px;
+                    height: 30px;
+                  }
+                }
+              }
+            }
+  
+            &:hover .dropdown-content,
+            &:focus-within .dropdown-content {
+              display: block;
+              background-color: rgba(255, 255, 255, 0.243);
+              border-radius: 10%;
+              border: 1px solid rgb(68, 5, 68);
+            }
+          }
+        }
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('/src/assets/images/Removal-963.png');
+      background-repeat: no-repeat;
+      background-size: 18%;
+      background-position: bottom;
+      opacity: 0;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    }
+  
+    &:hover::before {
+      opacity: 1;
+      transform: translateY(-100%);
+    }
+  }
+

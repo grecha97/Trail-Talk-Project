@@ -1,0 +1,39 @@
+@import '/src/style/vars.scss';
+
+.dictionary {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+    .word-list {
+      margin-bottom: 20px;
+  
+      .word {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+  
+        .word-item {
+          flex: 1;
+          padding: 8px;
+          font-size: 14px;
+          border-right: 1px solid #ccc;
+        }
+  
+        .buttons {
+          width: 10rem;
+          display: flex;
+          justify-content: space-evenly;
+          }
+        }
+      }
+    }
+  
