@@ -1,4 +1,5 @@
 import './Header.scss'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -8,11 +9,10 @@ const Header = () => {
           <img src="src\assets\images\[removal.ai]_d59f5708-8123-42d6-9149-a12fc5f4fc6d-1674623364_gas-kvas-com-p-cheshirskii-kot-konturnii-risunok-1.png" alt="Logo" />
         </div>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#cards">Cards</a></li>
-            <li><a href="#dictionary">Dictionary</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/game">Cards</Link></li>
             <li className="dropdown">
-                <a href="#contact">Contact</a>
+                <a href="#contact">Contacts</a>
                 <div className="dropdown-content">
                 <div className="up">
                   <button className="card1">
